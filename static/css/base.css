@@ -27,10 +27,11 @@ font-family:'Capriola',sans-serif;font-size:200%!important;color:#1B809E!importa
 }
 
 .padsize li {font-size:20px;padding:15px;}
-.sidebox{padding:5px;color:black;border-radius:10px;text-shadow:1px 1px 0px #888;border: 3px solid #1B809E;text-align:center;background-color:rgba(255, 255, 255, 0.4);}
+.sidebox{padding:5px;color:black;border-radius:10px;text-shadow:1px 1px 0px #888;border: 3px solid #1B809E;text-align:center;background-color:rgba(255, 255, 255, 0.85);}
 .fontincr li a{font-size: 18px;}
-.container{box-shadow: 0px 0px 8px #000;padding:5px 50px 50px 50px;background-color: #fff;
-background:rgba(255,255,255,0.7)
+.container{box-shadow: 0px 0px 8px #000;padding:5px 50px 50px 50px;
+/* background-color: #fff;
+background:rgba(255,255,255,0.7) */
 }
 
 .container1{box-shadow: 0px 0px 8px #000;background-color: rgba(255, 255, 255, 0.4);}
@@ -39,13 +40,11 @@ background:rgba(255,255,255,0.7)
 .nav-justified {background-color: white}
 .bodypad{
 background: #1B809E; /* fallback for old browsers */
-background-image: url("../img/harry-potter-14.jpg")!important;
+background-image: url("../img/technology.jpg")!important;
 
-
-
-/*-webkit-background-size: cover;*/
-/*-moz-background-size: cover;*/
-/*-o-background-size: cover;*/
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
 background-size: cover;
 
   /*background-repeat: no-repeat!important;*/
@@ -55,7 +54,7 @@ background-size: cover;
   /*background: linear-gradient(to left, #1B809E , #5691c8);*/
   padding-top:0
 }
-.rules{border:5px solid #eee;border-radius: 5px;margin-bottom: 10px;background-color:rgba(255, 255, 255, 0.4)}
+.rules{border:5px solid #eee;border-radius: 5px;margin-bottom: 10px;background-color:rgba(255, 255, 255, 0.85)}
 .nav li  a:hover {
 background-color: #ddd;
 box-shadow:0px 3px 7px rgba(0, 0, 0, 0.15) inset;
@@ -70,7 +69,7 @@ background-image: none;
 
 .padleft{padding-left:10px;}
 .bodypad{
-  background-image: url("../img/black.jpg")!important;
+  background-image: url("../img/technology.jpg")!important;
   }
 }
 
