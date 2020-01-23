@@ -11,7 +11,7 @@ def landing(request):
     return render(request, 'landing.html')
 
 def index(request):   
-    m_level = models.total_level.objects.get(id=7)
+    m_level = models.total_level.objects.get(id=1)
     lastlevel = m_level.totallevel
   
     user = request.user
@@ -52,7 +52,7 @@ def save_profile(backend, user, response, *args, **kwargs):
 @login_required
 def answer(request):
     
-    m_level = models.total_level.objects.get(id=7)
+    m_level = models.total_level.objects.get(id=1)
     lastlevel = m_level.totallevel
     # print(lastlevel)
 
