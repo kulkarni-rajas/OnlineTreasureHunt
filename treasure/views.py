@@ -3,7 +3,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import models
 from django.contrib import messages
-from oth import models
+from . import models
 import datetime
 
 def landing(request):
