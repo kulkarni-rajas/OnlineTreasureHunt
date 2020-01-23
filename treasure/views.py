@@ -3,6 +3,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import models
 from django.contrib import messages
+from django.core.exceptions import ObjectDoesNotExist
 from . import models
 import datetime
 
@@ -19,7 +20,7 @@ def index(request):
         try:
             level = models.level.objects.get(l_number=player.current_level)
             return render(request, 'level.html', {'player': player, 'level': level})
-        except models.level.DoesNotExist:
+        except ObjectDoesNotExist:
             if player.current_level > lastlevel:
                 return render(request, 'win.html', {'player': player})
             return render(request, 'finish.html', {'player': player})
@@ -61,7 +62,7 @@ def answer(request):
     player = models.player.objects.get(user_id=request.user.pk)
     try:
         level = models.level.objects.get(l_number=player.current_level)
-    except models.level.DoesNotExist:
+    except ObjectDoesNotExist:
         if player.current_level > lastlevel:
             return render(request, 'win.html', {'player': player})
         return render(request, 'finish.html', {'player': player})
