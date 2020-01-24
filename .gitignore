@@ -1,4 +1,6 @@
 .env
 db.sqlite3
 *.pyc
-*/__pychache__/*
+venv/
+oth/__pycache__/
+treasure/__pycache__
