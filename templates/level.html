@@ -15,7 +15,7 @@
         <span9 class="icon-bar"></span9>
         <span9 class="icon-bar"></span9>
       </button>
-      <a href="/" style="color:#000" class="navbar-brand"><span92>🔍</span92><span91 style="margin-left:10px;font-family: 'Creepster', cursive;font-size:20px;opacity: 0.8;">Online Treasure Hunt</span91>
+      <a href="/" style="color:#000" class="navbar-brand"><span92>🔍</span92><span91 style=" width:10px;height:10px;margin-left:10px;font-family: 'Creepster', cursive;font-size:20px;opacity: 0.8;">Online Treasure Hunt</span91>
       </a>
 <div class="navbar-brand" style="font-family:'Capriola',sans-serif;" >Your Score :   <span style="font-weight:bold;color:#5CB85C">{{player.score}} points</span></div>
     </div>
@@ -71,6 +71,8 @@
             </div>
             </br>
 
+            
+
 
         Enter your answer:
         <br>
@@ -92,31 +94,38 @@
         <!-- new -->
         </div>
 
-      <!-- <div class="col-lg-12 padleft" >
+      <div class="col-lg-12 padleft" >
         {%if level.audio.url != '/media/audios/default.mp3' %}
 
-              <div class="sidebox border-shadow" style="padding:15px;font-size: 20px">
+              <div class="sidebox border-shadow" style="font-size: 20px">
                 <p>Audio Hint</p>
                 <audio controls="" src="{{level.audio.url}}">
                 </audio>
               </div>
+              <!-- <div class="col-sm-4 col-sm-offset-4">
+                <audio controls style="width: 600px;">
+                  <source src="sample.mp3">
+                </audio>
+              </div> -->
+          
         <hr>
+
         {%endif%}
 
-        <div class="sidebox border-shadow" style="padding:15px">
+        <!-- <div class="sidebox border-shadow" style="padding:15px">
           <p style="font-size:24px;text-align:center;opacity:0.8">Number of people who crossed this level</p>
           <p style="text-align:center;font-size:35px;color:green">{{level.numuser}}</p>
           <p style="text-align:center;font-size:25px;color:#008080">Accuracy: {{level.accuracy}}</p>
         </div>
       </div> -->
-      <!--  -->
+      </div>
 
 <button class="toggle" style="margin-left:10px">STATUS</button>
-<div class="toggle">
+<!-- <div class="toggle">
    <div class="btn-container">
      <button class="btns2 btns" id="btns2">Click Here</Button>
    </div>
-</div>
+</div> -->
 
 <div id="target">
    <div class="col-lg-12 padleft" >

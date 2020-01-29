@@ -5,6 +5,7 @@ from django.contrib.auth import models
 from django.contrib import messages
 from django.core.exceptions import ObjectDoesNotExist
 from . import models
+from django.utils import timezone
 import datetime
 
 def landing(request):
@@ -54,7 +55,6 @@ def answer(request):
     
     m_level = models.total_level.objects.get(id=1)
     lastlevel = m_level.totallevel
-    # print(lastlevel)
 
     ans = ""
     if request.method == 'POST':
@@ -64,7 +64,9 @@ def answer(request):
         level = models.level.objects.get(l_number=player.current_level)
     except ObjectDoesNotExist:
         if player.current_level > lastlevel:
-            return render(request, 'win.html', {'player': player})
+            print("-------------------2")
+            return render(request, 'win.html', {'player': player})  
+        print("-------------------3")    
         return render(request, 'finish.html', {'player': player})
     # print answer
     # print level.answer
@@ -72,7 +74,7 @@ def answer(request):
         #print level.answer
         player.current_level = player.current_level + 1
         player.score = player.score + 10
-        player.timestamp = datetime.datetime.now()
+        player.timestamp = datetime.datetime.now(tz=timezone.utc)
         level.numuser = level.numuser + 1
         level.accuracy = round(level.numuser/(float(level.numuser + level.wrong)),2)
         level.save()
@@ -85,11 +87,11 @@ def answer(request):
             return render(request, 'level.html', {'player': player, 'level': level})
         except:
             if player.current_level > lastlevel:
-                return render(request, 'win.html', {'player': player}) 
+                return render(request, 'win.html', {'player': player})    
             return render(request, 'finish.html', {'player': player})
     elif ans=="":
-        pass 
-        # messages.error(request, "Please enter answer!")
+        return render(request, 'level.html', {'player': player, 'level': level})
+        messages.error(request, "Please enter answer!")
 
     else:
         level.wrong = level.wrong + 1

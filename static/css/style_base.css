@@ -119,3 +119,9 @@ td{
     max-height: 5em;
     max-width: 80%;
 }
+
+@media screen and (max-width: 750px){
+  audio{
+    width:400px;
+  }
+}
