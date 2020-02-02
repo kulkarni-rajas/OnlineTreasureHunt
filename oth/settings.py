@@ -27,7 +27,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG',cast=bool)
 
-ALLOWED_HOSTS = ['440601eb.ngrok.io','127.0.0.1']
+ALLOWED_HOSTS = ['440601eb.ngrok.io','127.0.0.1','http://localhost:8000/']
 
 
 # Application definition
@@ -132,6 +132,9 @@ STATICFILES_DIRS = (
 )
 
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_root")
+
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_URL ='/media/'
 
 
 AUTHENTICATION_BACKENDS = (
